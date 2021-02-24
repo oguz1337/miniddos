@@ -11,12 +11,13 @@ use Scalar::Util qw(looks_like_number);
 #=== Clear Screen ===#
 system("cls || clear");
 #Script Banner================================================================
-print q{         __  __ _       _ ____  ____       ____
+print q{ 
+         __  __ _       _ ____  ____       ____
         |  \/  (_)_ __ (_)  _ \|  _ \  ___/ ___|
         | |\/| | | '_ \| | | | | | | |/ _ \___ \
         | |  | | | | | | | |_| | |_| | (_) |__) |
         |_|  |_|_|_| |_|_|____/|____/ \___/____/
-           Coder: SyberCodeV1 & GrayTurkish
+           Coder: SyberCodeV1 & sybercodev1.com
 };
 
 my $check = IO::Socket::INET->new( 'PeerAddr'=>'www.google.com', 
